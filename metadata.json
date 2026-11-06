@@ -1,0 +1,7 @@
+{
+  "name": "Cake & Celebration Cake Shop",
+  "description": "Premium handcrafted celebration cakes, customized designer cakes, photo cakes, and fresh bakery treats in Yerawada, Pune. Love at first bite.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

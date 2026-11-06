@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Browser Extension / Interceptor Compatibility Shim
+      // In some browser sandbox/iframe environments, window.fetch is exposed with a getter-only descriptor.
+      // Extensions like request interceptors attempt `window.fetch = ...`, throwing a TypeError.
+      // Providing a configurable getter/setter prevents this crash.
+      try {
+        let _currentFetch = window.fetch;
+        Object.defineProperty(window, 'fetch', {
+          get() {
+            return _currentFetch;
+          },
+          set(val) {
+            _currentFetch = val;
+          },
+          configurable: true,
+          enumerable: true,
+        });
+      } catch (e) {
+        // Ignore if restricted by browser security policies
+      }
+    </script>
+    <title>Cake & Celebration Cake Shop - Yerawada, Pune</title>
+    <meta name="description" content="Premium handcrafted celebration cakes, customized designer cakes, photo cakes, and fresh bakery treats in Yerawada, Pune. Love at first bite." />
+    <meta property="og:title" content="Cake & Celebration Cake Shop - Yerawada, Pune" />
+    <meta property="og:description" content="Premium handcrafted celebration cakes, customized designer cakes, photo cakes, and fresh bakery treats in Yerawada, Pune. Love at first bite." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#FAF7F2] text-[#2C1810] antialiased selection:bg-[#EBD7FC] selection:text-[#4A1E73]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
